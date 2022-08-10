@@ -1,0 +1,25 @@
+{
+  "name": "09_readme_initializer",
+  "version": "1.0.0",
+  "description": "this script will create a readme",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RyanSchu/09_README_initializer.git"
+  },
+  "author": "Ryan Schubert",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RyanSchu/09_README_initializer/issues"
+  },
+  "homepage": "https://github.com/RyanSchu/09_README_initializer#readme",
+  "dependencies": {
+    "inquirer": "^9.1.0"
+  }
+}
