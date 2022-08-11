@@ -42,7 +42,7 @@ inquirer
         type: 'input',
         message: 'Github:',
         name: 'git',
-    },
+    }
   ])
   .then((response) =>
     createREADME(response)
@@ -50,21 +50,53 @@ inquirer
 
 function createREADME(input) {
     const textArray = processInput(input)
-    for (el in textArray) {
-        fs.append(el,target)
+    // console.log(textArray)
+    for (let el in textArray) {
+        console.log(textArray[el])
+        // fs.append(el,target)
     }
 }
 
 function processInput(input) {
     let title = getTitle(input)
     let desc = getDescription(input)
-    let toc = makeTOC(input)
+    // let toc = makeTOC(input)
     let inst = getInstall(input)
     let use = getUse(input)
-    let lic = license(input)
+    // let lic = license(input)
     let cont = getContributing(input)
     let test = getTests(input)
     let question = getQuestion(input)
-    return [title,desc,toc,inst,use,lic,cont,test,question]
+    return [title,desc,inst,use,cont,test,question]
+    // return [title,desc,toc,inst,use,lic,cont,test,question]
 }
 
+function getTitle(input) {
+    // let dfault = "# Title"
+    // // if 
+    return input.title
+}
+
+function getDescription(input) {
+    return input.desc
+}
+
+function getInstall(input) {
+    return input.install
+}
+
+function getUse(input) {
+    return input.use
+}
+
+function getContributing(input) {
+    return input.cont
+}
+
+function getTests(input) {
+    return input.test
+}
+
+function getQuestion(input) {
+    return input.git
+}
