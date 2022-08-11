@@ -34,6 +34,7 @@ THEN I am taken to the corresponding section of the README
 ```
 load the inquirer package
 create a series of questions to accept user input on 
+  title
   description
   installation
   usage
@@ -43,6 +44,7 @@ create a series of questions to accept user input on
   questions
 do any processing necessary on each answer
 generate the content for each of the following sections
+  title
   description
   table of contents
   installation
