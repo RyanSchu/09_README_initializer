@@ -50,11 +50,9 @@ inquirer
 
 function createREADME(input) {
     const textArray = processInput(input)
-    // console.log(textArray)
-    for (let el in textArray) {
-        console.log(textArray[el])
-        // fs.append(el,target)
-    }
+    let stream = fs.createWriteStream("./append.md", {flags:'a'});
+    textArray.forEach( (index) =>{stream.write(index + "\n");});
+    stream.end();
 }
 
 function processInput(input) {
@@ -72,31 +70,43 @@ function processInput(input) {
 }
 
 function getTitle(input) {
-    // let dfault = "# Title"
-    // // if 
+    let dfault = "# Title"
+    if (input.title == '') return dfault
     return input.title
 }
 
 function getDescription(input) {
+    let dfault = "## Description"
+    if (input.desc == '') return dfault
     return input.desc
 }
 
 function getInstall(input) {
+    let dfault = "## Install"
+    if (input.install == '') return dfault
     return input.install
 }
 
 function getUse(input) {
+    let dfault = "## Useage"
+    if (input.use == '') return dfault
     return input.use
 }
 
 function getContributing(input) {
+    let dfault = "## Contribution"
+    if (input.cont == '') return dfault
     return input.cont
 }
 
 function getTests(input) {
+    let dfault = "## Tests"
+    if (input.test == '') return dfault
     return input.test
 }
 
 function getQuestion(input) {
+    let dfault = "## Questions"
+    if (input.git == '') return dfault
     return input.git
 }
