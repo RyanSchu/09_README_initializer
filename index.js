@@ -56,7 +56,7 @@ inquirer
 
 function createREADME(input) {
     const textArray = processInput(input)
-    let stream = fs.createWriteStream("./README.md", {flags:'a'});
+    let stream = fs.createWriteStream("./test/README.md", {flags:'a'});
     textArray.forEach( (index) =>{stream.write(index + "\n\n");});
     stream.end();
 }
